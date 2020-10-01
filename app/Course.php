@@ -20,5 +20,9 @@ class Course extends Model
   	return $this->belongsTo('App\Level');
   }
 
+  public function lesson(){
+      return $this->hasMany('App\Lesson');
+    }
+
 
 }

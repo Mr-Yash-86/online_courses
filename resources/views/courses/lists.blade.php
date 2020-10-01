@@ -11,9 +11,10 @@
                     <tr>
                       <th>#</th>
                       <th>Title</th>
-                      <th>Photo</th>
+                      <th>Category</th>
                       <th>Price</th>
                       <th>Lecture</th>
+                      <th>Level</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -21,9 +22,10 @@
                     <tr>
                       <th>#</th>
                       <th>Title</th>
-                      <th>Photo</th>
+                      <th>Category</th>
                       <th>Price</th>
                       <th>Lecture</th>
+                      <th>Level</th>
                       <th>Action</th>
                     </tr>
                   </tfoot>
@@ -33,9 +35,13 @@
                     @php
                       $id = $course->id;
                       $title = $course->title;
+                      
+                      $category = $course->category->name;
                       $photo = $course->photo;
                       $price = $course->price;
                       $lecture = $course->lecture;
+                      $level = $course->level->name;
+
                     @endphp
                     <tr>
                       <td>{{$i++}}</td>
@@ -43,13 +49,15 @@
                         <img src="{{ asset($photo) }}" alt="" class="img-fluid" style="width: 70px;">   
                         {{ $title }}      
                       </td>
+                      <td>{{ $category }}</td>
                       <td>{{ $price }}</td>
                       <td>{{ $lecture }}</td>
+                      <td>{{ $level }}</td>
                       <td>
-                        <a href="" class="btn btn-warning">
+                        <a href="{{route('courses.edit',$id)}}" class="btn btn-warning">
                           <i class="fas fa-tools"></i>
                         </a>
-                        <form action="" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?')">
+                        <form action="{{route('courses.destroy',$id)}}" method="POST" class="d-inline-block" onsubmit="return confirm('Are you sure?')">
 
                                     @csrf
                                     @method('DELETE')
@@ -61,6 +69,7 @@
                                 </form>
                       </td>
                     </tr> 
+                    @endforeach
                   </tbody>
                 </table>
               </div>
