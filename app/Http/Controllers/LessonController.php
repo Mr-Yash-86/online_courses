@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Lesson;
 use Illuminate\Http\Request;
 use App\Course;
+use FFMpeg;
 
 class LessonController extends Controller
 {
@@ -47,7 +48,6 @@ class LessonController extends Controller
         if ($validator) {
             $title = $request->title;
             $video = $request->video;
-            $duration = $request->duration;
             $courseid = $request->courseid;
             
             // FILE UPLOAD
@@ -58,8 +58,13 @@ class LessonController extends Controller
                     $video->move(public_path('videos/lessons'), $videoname);  
                     $filepath = 'videos/lessons/'.$videoname;      
             }
-            
 
+
+            $ffprobe = ffprobe::create();
+            $duration=$ffprobe
+                     ->format($this->getCorrectPathOnServerAndLocal('videos/lessons').$filepath)
+                     ->get('duration');
+            
 
             $lesson= new Lesson();
             $lesson->title = $title;

@@ -21,3 +21,11 @@ Route::resource('/courses','CourseController');
 
 Route::resource('/lessons','LessonController');
 
+Route::get('/','FrontendController@index')->name('index');
+
+Route::get('/fcourses','FrontendController@courses')->name('fcourses');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

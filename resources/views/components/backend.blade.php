@@ -59,17 +59,17 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ route('courses.index')}}">
           <i class="fas fa-clipboard-list"></i>
-          <span>Item</span>
+          <span>Courses</span>
         </a>      
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ route('lessons.index')}}">
           <i class="fas fa-clipboard-list"></i>
-          <span>Brand</span>
+          <span>Lessons</span>
         </a>
       </li>  
   
@@ -77,7 +77,7 @@
       
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
           <span>Subcategory</span></a>
@@ -87,7 +87,7 @@
           <i class="fas fa-clipboard-list"></i>
           <span>Category</span>
         </a>
-      </li>  
+      </li>   -->
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

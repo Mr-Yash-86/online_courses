@@ -43,7 +43,7 @@
                         </div>
 
 
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="lecture_id" class="col-sm-2 col-form-label"> Duration </label>
                             <div class="col-sm-10">
                                 <input type="text" name="duration" id="durationForm" maxlength=8 pattern="^((\d+:)?\d+:)?\d*$"
@@ -52,7 +52,7 @@
                                 (empty or zero leads to an infinite duration)."
                                 placeholder="hh:mm:ss (empty for infinite duration)" size=30>
                             </div>
-                        </div>
+                        </div> -->
 
                         
 
