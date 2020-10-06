@@ -15,6 +15,7 @@
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
         "laravel/ui": "2.4",
+        "pbmedia/laravel-ffmpeg": "^7.2",
         "php-ffmpeg/php-ffmpeg": "^0.16.0",
         "spatie/laravel-permission": "^3.17"
     },

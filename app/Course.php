@@ -24,5 +24,11 @@ class Course extends Model
       return $this->hasMany('App\Lesson');
     }
 
+  public function users(){
+      return $this->belongsToMany('App\User' , 'enroll','user_id','course_id')
+                  ->withPivot('enroll_date')
+                  ->withTimestamps();
+    }  
+
 
 }

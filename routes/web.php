@@ -29,3 +29,13 @@ Route::get('/fcourses','FrontendController@courses')->name('fcourses');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contact',function(){
+	return view('frontend.contact');
+});
+
+Route::get('/about',function(){
+	return view('frontend.about');
+});
+
+Route::get('/detailcourse/{id}','FrontendController@detailcourse')->name('detailcourse');
