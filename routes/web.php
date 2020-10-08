@@ -17,25 +17,35 @@ Route::get('/', function () {
     return view('components.backend');
 });
 
+
+Route::group(['middleware' => ['role:admin']], function () {
+    //
+
+
 Route::resource('/courses','CourseController');
 
 Route::resource('/lessons','LessonController');
+
+
+});
+
+/*Route::group(['middleware' => ['role:user']], function () {
+    //*/
 
 Route::get('/','FrontendController@index')->name('index');
 
 Route::get('/fcourses','FrontendController@courses')->name('fcourses');
 
+Route::get('/contact','ContactController@contact')->name('contact');
+
+Route::get('/about','AboutController@about')->name('about');
+
+Route::get('/detailcourse/{id}','FrontendController@detailcourse')->name('detailcourse');
+
+//Route::resource('users','UserController');
+
+/*});*/
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/contact',function(){
-	return view('frontend.contact');
-});
-
-Route::get('/about',function(){
-	return view('frontend.about');
-});
-
-Route::get('/detailcourse/{id}','FrontendController@detailcourse')->name('detailcourse');
