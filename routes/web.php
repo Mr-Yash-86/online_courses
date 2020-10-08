@@ -29,8 +29,7 @@ Route::resource('/lessons','LessonController');
 
 });
 
-/*Route::group(['middleware' => ['role:user']], function () {
-    //*/
+
 
 Route::get('/','FrontendController@index')->name('index');
 
@@ -41,6 +40,10 @@ Route::get('/contact','ContactController@contact')->name('contact');
 Route::get('/about','AboutController@about')->name('about');
 
 Route::get('/detailcourse/{id}','FrontendController@detailcourse')->name('detailcourse');
+
+/*Route::group(['middleware' => ['role:user']], function () {*/
+    //
+Route::get('/detaillesson/{id}','FrontendController@detaillesson')->name('detaillesson');
 
 //Route::resource('users','UserController');
 

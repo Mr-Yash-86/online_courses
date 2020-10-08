@@ -1,8 +1,10 @@
 <x-frontend>
-	<div class="container-fluid mb-5">
-		<h4>What's INSIDE ... ?</h4>
+
+	<div class="container">
+		<div class="d-flex bd-highlight mb-3">
+		<div class="p-2 bd-highlight">What's INSIDE?</div>
+		<div class="ml-auto p-2 bd-highlight"><button class="btn btn-primary">ENROLL</button></div>
 	</div>
-	
 	<div class="container">
 		
 	@php $i=1; @endphp
@@ -13,7 +15,8 @@
 	</div> --}}
 	<div class="d-flex bd-highlight mb-3">
 		<div class="p-2 bd-highlight">{{ $i++ }}</div>
-		<div class="p-2 bd-highlight">{{$detailcourse->title}}</div>
+		<div class="p-2 bd-highlight">
+			<a href="{{ route('detaillesson',$detailcourse->id)}}" style="color: black;">{{$detailcourse->title}}</a></div>
 		<div class="ml-auto p-2 bd-highlight">{{$detailcourse->duration}}</div>
 	</div>
 	@endforeach
