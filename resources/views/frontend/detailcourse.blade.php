@@ -1,9 +1,15 @@
 <x-frontend>
 
+         @php
+		 $id = $courses->id;
+		 @endphp
 	<div class="container">
 		<div class="d-flex bd-highlight mb-3">
 		<div class="p-2 bd-highlight">What's INSIDE?</div>
-		<div class="ml-auto p-2 bd-highlight"><button class="btn btn-primary">ENROLL</button></div>
+
+		@if(Auth::check())
+		<div class="ml-auto p-2 bd-highlight"><a href="{{route('enroll',$id)}}" class="btn btn-primary" >ENROLL</a></div>
+		@endif
 	</div>
 	<div class="container">
 		

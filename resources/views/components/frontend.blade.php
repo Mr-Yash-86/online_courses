@@ -60,9 +60,23 @@
                                     </ul>
                                 </div>
                                 <div class="header-info-right">
-                                    <ul>    
+                                    <ul>
+                                        @guest    
                                         <li><a href="{{route('login')}}"><i class="ti-user"></i>Login</a></li>
                                         <li><a href="{{route('register')}}"><i class="ti-lock"></i>Register</a></li>
+                                        @else
+                                        <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          {{ Auth::user()->name }}'s Account
+                                      </a>
+                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                          <a class="dropdown-item" href="javascript:void(0)" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sign Out</a>
+                                          <form id="logout-form" action="{{ route('logout')}}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                                @endif
                                     </ul>
                                 </div>
                             </div>
@@ -93,14 +107,14 @@
                                 </nav>
                             </div>
                             <!-- Header-btn -->
-                            <div class="header-search d-none d-lg-block">
+                            {{-- <div class="header-search d-none d-lg-block">
                                 <form action="#" class="form-box f-right ">
                                     <input type="text" name="Search" placeholder="Search Courses">
                                     <div class="search-icon">
                                         <i class="fas fa-search special-tag"></i>
                                     </div>
                                 </form>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">

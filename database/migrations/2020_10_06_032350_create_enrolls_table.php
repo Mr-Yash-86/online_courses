@@ -23,7 +23,7 @@ class CreateEnrollsTable extends Migration
                   ->references('id')
                   ->on('courses')
                   ->onDelete('cascade');      
-            $table->string('enroll_date');
+            $table->date('enroll_date');
             $table->timestamps();
         });
     }

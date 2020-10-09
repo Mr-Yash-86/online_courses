@@ -45,6 +45,8 @@ Route::get('/detailcourse/{id}','FrontendController@detailcourse')->name('detail
     //
 Route::get('/detaillesson/{id}','FrontendController@detaillesson')->name('detaillesson');
 
+Route::get('/enroll/{id}','FrontendController@enroll')->name('enroll');
+
 //Route::resource('users','UserController');
 
 /*});*/

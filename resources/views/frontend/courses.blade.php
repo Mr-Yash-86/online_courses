@@ -16,25 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="all-course-wrapper">
-                   {{--  <!-- Heading & Nav Button -->
-                    <div class="row mb-15">
-                        <div class="col-lg-12">
-                            <div class="properties__button mb-90">
-                                <!--Nav Button  -->                                            
-                                <nav>                                                                             
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">All</a>
-                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Web</a>
-                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Graphic</a>
-                                        <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab" href="#nav-last" role="tab" aria-controls="nav-contact" aria-selected="false">Video</a>
-                                        <a class="nav-item nav-link" id="nav-Sports" data-toggle="tab" href="#nav-nav-Sport" role="tab" aria-controls="nav-contact" aria-selected="false">Language</a>
-                                    </div>
-                                </nav>
-                                <!--End Nav Button  -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Tab content --> --}}
+                    <!-- Tab content -->
                     <div class="row">
                         <div class="col-12">
                             <!-- Nav Card -->

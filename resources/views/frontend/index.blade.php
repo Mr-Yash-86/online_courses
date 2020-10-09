@@ -49,7 +49,7 @@
             </div>
         </div>
         <!-- slider Area End-->
-        <!--? Categories Area Start -->
+        {{-- <!--? Categories Area Start -->
         <div class="categories-area section-padding30">
             <div class="container">
                 <div class="row justify-content-sm-center">
@@ -199,7 +199,7 @@
                 </div>
             </div>
         </div>
-        <!-- Count Down End -->
+        <!-- Count Down End --> --}}
         <!--? Popular Course Start -->
         <div class="popular-course section-padding30">
             <div class="container">
@@ -316,7 +316,7 @@
         </div>
         <!-- Popular Course End -->
         <!--? Team Ara Start -->
-        <div class="team-area pt-160 pb-160 section-bg" data-background="{{ asset('frontend/assets/img/gallery/section_bg02.png')}}">
+        {{-- <div class="team-area pt-160 pb-160 section-bg" data-background="{{ asset('frontend/assets/img/gallery/section_bg02.png')}}">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">
@@ -406,7 +406,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Team Ara End -->
         <!--? About Law Start-->
         <div class="about-area section-padding2">
@@ -444,7 +444,7 @@
             </div>
         </div>
         <!-- About Law End-->
-        <!--? Testimonial Start -->
+        {{-- <!--? Testimonial Start -->
         <div class="testimonial-area fix pt-180 pb-180 section-bg" data-background="assets/img/gallery/section_bg03.png">
             <div class="container">
                 <div class="row justify-content-center">
@@ -558,5 +558,5 @@
                 </div>
             </div>
         </div>
-        <!-- Blog Area End -->
+        <!-- Blog Area End --> --}}
 </x-frontend>
